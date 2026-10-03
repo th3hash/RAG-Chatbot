@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620">
+<defs><style>.box{fill:#111827;stroke:#64748b;stroke-width:2}.txt{fill:#f8fafc;font:22px Arial}.small{fill:#cbd5e1;font:16px Arial}.arrow{stroke:#94a3b8;stroke-width:3;marker-end:url(#m)}</style><marker id="m" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#94a3b8"/></marker></defs>
+<rect width="1200" height="620" fill="#020617"/>
+<text x="600" y="45" text-anchor="middle" class="txt" font-size="30">RAG Chatbot Architecture</text>
+<g transform="translate(55,100)">
+<rect class="box" width="170" height="90" rx="14"/><text x="85" y="42" text-anchor="middle" class="txt">PDF</text><text x="85" y="68" text-anchor="middle" class="small">handbook.pdf</text>
+<rect class="box" x="235" width="170" height="90" rx="14"/><text x="320" y="42" text-anchor="middle" class="txt">Load + Chunk</text><text x="320" y="68" text-anchor="middle" class="small">500 / 50</text>
+<rect class="box" x="470" width="170" height="90" rx="14"/><text x="555" y="42" text-anchor="middle" class="txt">Embeddings</text><text x="555" y="68" text-anchor="middle" class="small">Sentence Transformers</text>
+<rect class="box" x="705" width="170" height="90" rx="14"/><text x="790" y="42" text-anchor="middle" class="txt">Chroma</text><text x="790" y="68" text-anchor="middle" class="small">Vector DB</text>
+<path class="arrow" d="M170 45H230"/><path class="arrow" d="M405 45H465"/><path class="arrow" d="M640 45H700"/>
+</g>
+<rect class="box" x="190" y="300" width="220" height="90" rx="14"/><text x="300" y="342" text-anchor="middle" class="txt">User Question</text><text x="300" y="368" text-anchor="middle" class="small">retrieve top 3 chunks</text>
+<rect class="box" x="490" y="300" width="220" height="90" rx="14"/><text x="600" y="342" text-anchor="middle" class="txt">Prompt + Context</text><text x="600" y="368" text-anchor="middle" class="small">question + retrieved text</text>
+<rect class="box" x="790" y="300" width="220" height="90" rx="14"/><text x="900" y="342" text-anchor="middle" class="txt">Ollama</text><text x="900" y="368" text-anchor="middle" class="small">local LLM</text>
+<path class="arrow" d="M410 345H485"/><path class="arrow" d="M710 345H785"/><path class="arrow" d="M790 190V295"/>
+<rect class="box" x="490" y="485" width="220" height="75" rx="14"/><text x="600" y="530" text-anchor="middle" class="txt">Grounded Answer</text>
+<path class="arrow" d="M900 390V430H600V480"/>
+</svg>

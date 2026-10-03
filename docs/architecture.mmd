@@ -1,0 +1,10 @@
+flowchart LR
+A[handbook.pdf] --> B[PyPDFLoader]
+B --> C[Chunking 500/50]
+C --> D[Sentence Transformers]
+D --> E[(Chroma)]
+Q[User question] --> R[Retriever top 3]
+E --> R
+R --> P[Prompt + Context]
+P --> O[Ollama]
+O --> F[Grounded answer]
